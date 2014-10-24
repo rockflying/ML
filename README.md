@@ -1,2 +1,3 @@
-machinelearning
+Machinelearning
 ===============
+study of machine learning
