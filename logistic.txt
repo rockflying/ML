@@ -4,4 +4,13 @@ P(Y=1|x) = exp(w*x+b)/(1+exp(w*x+b))
 
 P(Y=0|x) = 1/(1+exp(w*x+b))
 
-where x belongs to R^n as inputs, Y belongs to {0, 1} as outputs, and w belongs to R^n and b belongs to R as parameters. w*x 是 w和x的内积.
+where x belongs to R^n as inputs, Y belongs to {0, 1} as outputs, and w belongs to R^n and b belongs to R as parameters. w is a vector of weights while b stands for bias. 
+
+The logistic regression model can convert a linear function into probability:
+
+P(Y=1|x) = exp(w*w) / (1 + exp(w*x)), where both x and w in R^(n+1), which means w=(w1,w2, ... wn,b) and x=(x1,x2, ... xn,1).
+
+An event odds is the ratio of the probability that it happens to that it doesn't. If the probability it happens is p, the odds of the event is p/(1-p), and further its log odds is:
+logit(p) = ln(p/(1-p)).
+
+As for logistic regression, log(P(Y=1|x)/(1-P(Y=1|x))) = w*x.
