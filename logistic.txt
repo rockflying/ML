@@ -1,0 +1,7 @@
+1. Binomial logistic regression model
+
+P(Y=1|x) = exp(w*x+b)/(1+exp(w*x+b))
+
+P(Y=0|x) = 1/(1+exp(w*x+b))
+
+where x belongs to R^n as inputs, Y belongs to {0, 1} as outputs, and w belongs to R^n and b belongs to R as parameters. w*x 是 w和x的内积.
