@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{xeCJK}
+\usepackage{CJK}
+\usepackage{geometry}
+\usepackage{amsmath}
+\setCJKmainfont{Microsoft YaHei}
+\geometry{left=2cm,right=2cm,top=2.5cm,bottom=2cm}
+
+\begin{document}
+\title{Machine Learning notes}
+\maketitle
+\setcounter{page}{1}
+
+\section{Vectorization}
+The unvectorized implementation:
+$$\theta_0 := \theta_0 - \alpha \frac{1}{m} \sum_{i=1}^{m}(h_\theta(x^{(i)}) - y^{(i)})x_{0}^{(i)}$$
+$$\theta_1 := \theta_1 - \alpha \frac{1}{m} \sum_{i=1}^{m}(h_\theta(x^{(i)}) - y^{(i)})x_{1}^{(i)}$$
+$$\theta_2 := \theta_2 - \alpha \frac{1}{m} \sum_{i=1}^{m}(h_\theta(x^{(i)}) - y^{(i)})x_{2}^{(i)}$$
+can be vectorized as follows:
+\begin{equation*}
+\begin{aligned}
+&\theta := \theta - \alpha\delta  \\
+&where \quad \delta = \frac{1}{m}\sum_{i=1}^{m}(h_\theta(x^{(i)}) - y^{(i)})x^{(i)} 
+\end{aligned}
+\end{equation*}
+\end{document}
